@@ -1,0 +1,70 @@
+.vaccinationTrend {
+    background-color: white;
+    border-radius: 7px;
+    margin: 7.5px 15px;
+    padding: 20px;
+}
+
+.vaccinationTrend__graph {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.vaccinationTrend__graph::-webkit-scrollbar {
+    height: 5px;
+}
+
+.vaccinationTrend__graph::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #9e9e9e;
+}
+
+
+.vaccinationTrend__mainHeading {
+    font-size: 15px;
+    color: #5e676f;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.vaccinationTrend__btn__container {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.right__btn__container, .left__btn__container {
+    margin-top: 10px;
+    
+}
+
+.vaccinationTrend__btn {
+    background: transparent;
+    border: none;
+    color: #adb5bd;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: color 200ms ease-in-out;
+}
+
+.vaccinationTrend__btn:hover {
+    color: #000;
+}
+
+.active {
+    border-bottom: 3px solid #001F60;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .vaccinationTrend__btn__container {
+        flex-direction: column;
+        align-items: flex-start ;
+    }
+}
+/* .vaccinationTrend__graph {
+    height: 30vh;
+} */
+
+/* #001F60 */

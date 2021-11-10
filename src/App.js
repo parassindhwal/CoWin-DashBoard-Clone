@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React,{useState, useEffect} from 'react'
 import './App.css';
+import Header from './components/Header';
+import Nav from './components/Nav'
+import Stats from './components/Stats';
+//redux
+import { useDispatch } from 'react-redux';
+import { loadPublicReport } from './actions/publicAction';
+import { loadVaccinationReport } from './actions/vaccinAction';
+import { publicInfoURL, vaccInfoURL } from './util';
+import VaccineTrend from './components/VaccineTrend';
+import VaccinationStats from './components/VaccinationStats';
+import VaccinationCoverage from './components/VaccinationCoverage';
 
 function App() {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    async function fetchData() {
+      dispatch(loadPublicReport(publicInfoURL()));
+      dispatch(loadVaccinationReport(vaccInfoURL()));
+    }
+
+    fetchData();
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Nav />
+      {/* Live charts section to be developed */}
+      <Stats />
+      <VaccineTrend />
+      <VaccinationStats />
+      <VaccinationCoverage />
     </div>
   );
 }

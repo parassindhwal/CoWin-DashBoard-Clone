@@ -1,0 +1,54 @@
+.stats__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+@media (max-width: 786px) {
+    .stats__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.selectState {
+    width: 210px;
+    margin-right: 10px;
+}
+
+.selectState > select, .selectDistrict > select  {
+    width: inherit;
+    box-shadow: 0 4px 10px rgba(0,29,54,.04);
+    border: snow;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #787878;
+    padding: 10px 15px;
+    font-weight: 500;
+    outline: none;
+}
+
+.selectDistrict {
+    width: 210px;
+}
+
+
+.stats__card {
+    display: flex;
+    margin: 0 7.5px;
+}
+
+
+@media (max-width: 992px) {
+    .stats__card{
+        flex-direction: column;
+    }
+}

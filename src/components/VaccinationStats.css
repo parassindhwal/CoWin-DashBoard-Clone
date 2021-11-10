@@ -1,0 +1,94 @@
+h3 {
+    padding: 10px 15px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.vaccinationStats > div {
+    background-color: white;
+    margin: 7.5px;
+}
+
+.vaccinationStats {
+    display: flex;
+    margin: 0 7.5px;
+}
+
+.vaccinationStats__category {
+    flex: 0.22;
+    border-radius: 6px;
+}
+
+.vaccinationStats__age {
+    flex: 0.34;
+    border-radius: 6px;
+}
+
+.vaccinationStats__age > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vaccinationStats__number {
+    flex: 0.44;
+    overflow-y: scroll;
+    height: 500px;
+    border-radius: 6px;
+}
+
+.vaccinationStats__number::-webkit-scrollbar {
+    width:  3px;
+}
+
+.vaccinationStats__number::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #9e9e9e;
+}
+
+@media (max-width: 958px) {
+    .vaccinationStats {
+        flex-direction: column;
+        
+    }
+    .vaccinationStats__number {
+        overflow: hidden;
+    }
+}
+
+/*styling table */
+.vaccinationStats__number__table {
+    width: 100%;
+}
+
+th {
+    font-size: 14px;
+    color: #5e676f;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid #dee2e6;
+    padding: 10px;
+}
+td {
+    border-top: 1px solid #dee2e6; 
+    border-bottom: none; 
+    border-left: none;
+    vertical-align: top;
+    padding: 10px;
+}
+.table__h1 {
+    text-align: left;
+}
+
+.table__r2,.table__r3, .table__h2, .table__h3 {
+    text-align: right;
+}
+
+.table__r1 {
+    color: #0090FF;
+}
+
+.table__r2,.table__r3 {
+    color: #12226f;
+    font-weight: 600;
+}

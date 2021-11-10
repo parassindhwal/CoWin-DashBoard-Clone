@@ -1,0 +1,21 @@
+.vaccinationCoverage {
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.vaccinationCoverage__graph {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.vaccinationCoverage__graph::-webkit-scrollbar {
+    height: 5px;
+}
+
+.vaccinationCoverage__graph::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #9e9e9e;
+    cursor: pointer;
+}

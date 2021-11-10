@@ -1,0 +1,66 @@
+.header {
+    background-color: #1E3770;
+    color: white;
+    font-weight: 300;
+}
+
+.header__inner {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.header__goi {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.header__goi > div {
+    width: 160px;
+}
+
+.header__goi__logo {
+    height: 32px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.header__goi__site {
+    text-decoration: none;
+    color: white;
+}
+
+.header__goi__site:hover {
+    text-decoration: underline;
+}
+
+.header__nav > a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.header__nav > a:hover {
+    text-decoration: underline;
+}
+
+.header__nav__dash {
+    position: relative;
+}
+
+.header__nav__dash::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    transform: translateY(50%);
+    bottom: 50%;
+    width: 1px;
+    height: 70%;
+    background-color: white;
+}
